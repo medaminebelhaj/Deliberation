@@ -1,0 +1,50 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  MICROSITE
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.page-microsite {
+  .image-carousel {
+    .image-carousel-slide {
+      img { width: 100%; }
+    }
+  }
+  .navigation-wrapper {
+    .branding { padding-top: 10px; padding-bottom: 20px;
+      .navbar-brand {
+        img { max-width: 200px; }
+      }
+      .search { margin-top: 20px;
+        .input-group { width: 300px; }
+      }
+    }
+    .primary-navigation-wrapper { background-color: $color-primary; padding: 10px 0px;
+      .navbar { min-height: inherit;
+        li { margin-right: 25px;
+          a { padding: 10px 0;
+
+          }
+        }
+        .social { line-height: 40px; float: right;
+          .fa { font-size: 18px; margin-left: 15px; }
+        }
+      }
+    }
+    .secondary-navigation-wrapper { background-color: $color-grey-background; color: $color-grey-dark; font-size: 11px; padding: 5px 0; }
+  }
+  #slider { background-color: darken($color-primary, 5%); padding-bottom: 30px; padding-top: 30px;
+    h1,h2 { color: #fff; }
+    p { color: #fff; }
+    a { color: #fff;
+      &:hover { color: $color-secondary; }
+    }
+    .slider-wrapper {
+      &:after { background-color: transparent }
+    }
+    .news-small {
+      article { border-bottom-color: rgba(255,255,255,.1);
+        header { padding-left: 0; }
+        i { float: left; display: inline-block; position: relative; top: 3px; }
+        a { padding-left: 20px; display: block; }
+      }
+    }
+  }
+}

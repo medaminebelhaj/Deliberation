@@ -1,0 +1,153 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  FORMS
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Buttons
+
+.btn { @include border-radius(0px); @include transition(.3s); background-color: $color-secondary; border: 2px solid transparent; color: #fff; font-weight: bold; /*min-height: 40px;*/ outline: none !important; padding: 8px 18px;
+  &:active, &:focus { @include box-shadow(none); color: #fff; }
+  &:hover { background-color: darken($color-secondary, 5%); color: #fff; }
+
+  &.btn-color-primary { background-color: $color-primary; color: #fff;
+    &:hover { background-color: darken($color-primary, 5%); }
+  }
+
+  &.btn-color-grey-dark { background-color: $color-grey-dark; color: #fff;
+    &:hover { background-color: darken($color-grey-dark, 5%); }
+  }
+
+  &.btn-color-grey-light { background-color: $color-grey-light; color: $color-grey-dark;
+    &:hover { background-color: darken($color-grey-light, 5%); }
+  }
+
+  &.btn-framed { background-color: transparent; border-color: $color-secondary; color: $color-secondary;
+    &:hover { background-color: $color-secondary; color: #fff; }
+
+    &.btn-color-primary { border-color: $color-primary; color: $color-grey-dark;
+      &:hover { background-color: $color-primary; color: #fff; }
+    }
+
+    &.btn-color-primary { border-color: $color-primary; color: $color-primary;
+      &:hover { background-color: $color-primary; }
+    }
+
+    &.btn-color-grey-dark { border-color: $color-grey-dark; color: $color-grey-dark;
+      &:hover { background-color: $color-grey-dark; color: #fff }
+    }
+
+    &.btn-color-grey-light { border-color: $color-grey-light; color: $color-grey-dark;
+      &:hover { background-color: $color-grey-light; }
+    }
+
+    &.btn-color-grey { border-color: $color-grey-light; color: $color-grey-dark;
+      &:hover { background-color: $color-grey-light; }
+    }
+    &.btn-color-white { border-color: #fff; color: $color-grey-dark;
+      &:hover { background-color: #fff; color: $color-grey-dark !important; }
+    }
+
+  }
+  &.btn-small { font-size: 12px; min-height: 30px; padding: 5px 10px; }
+  &.btn-large { font-size: 16px; padding: 12px 22px; }
+}
+
+.input-group-btn {
+  .btn { margin-left: 20px !important; }
+}
+
+// Inputs
+input[type="text"],input[type="email"], input[type="search"], input[type="password"], input[type="number"], textarea { @include box-shadow(none); @include border-radius(0px); @include transition(.3s); background-color: $color-grey-background; border: 2px solid $color-grey-light; font-size: 12px; min-height: 40px; padding: 10px 9px 9px 9px; width: 100%;
+  &:hover { border: 2px solid darken($color-grey-light, 12%); }
+  &:focus, &:active { @include box-shadow(none); border-color: darken($color-grey-light, 12%); background-color: #fff; }
+  &.has-dark-background { background-color: rgba(255,255,255,0.1); border: none; color: #fff;
+    &:hover { background-color: rgba(255,255,255,0.15); }
+    &:focus, &:active { background-color: #fff; color: $color-grey-dark; }
+  }
+}
+
+input { outline: none !important; }
+.input-group { margin-bottom: 10px; position: relative; width: 100%; }
+
+.checkbox { padding-left: 0px; }
+.radio { padding-left: 0px; }
+
+
+.contact-form {
+  #form-status { color: green; line-height: 45px;
+    #valid {
+      .icon { font-size: 24px; margin-right: 10px; vertical-align: middle; }
+    }
+    #invalid { color: red; }
+  }
+  label.error { background-color: red; bottom: -30px; color: #fff;  font-size: 12px; left: 0;  padding: 5px; position: absolute; z-index: 2;
+    &:before { border-style: solid; border-width: 0 3.5px 5px 3.5px; border-color: transparent transparent red transparent; content: ""; height: 0px; left: 5px; position: absolute; top: -5px; width: 0px; }
+  }
+}
+
+// Checkboxes
+.icheckbox { position: relative; display: inline-block; vertical-align: middle; background-color: $color-grey-background; border: 2px solid $color-grey-light; display: inline-block; height: 20px; margin-right: 10px; position: relative; width: 20px; top: -1px;
+  &:after { @include transition(.3s); @include opacity(0); @include font-awesome; color: $color-grey-dark; content: "\f00c"; position: absolute;  line-height: 15px; left: 2px; }
+  &.checked {
+    &:after { @include opacity(1); }
+  }
+}
+
+.iradio { @include border-radius(50%); position: relative; display: inline-block; vertical-align: middle; background-color: $color-grey-background; border: 2px solid $color-grey-light; display: inline-block; height: 20px; margin-right: 10px; position: relative; width: 20px; top: -1px;
+  &:after { @include transition(.3s); @include opacity(0); @include border-radius(50%); width: 8px; height: 8px; position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: auto; content: ""; background-color: $color-grey-dark; }
+  &.checked {
+    &:after { @include opacity(1); }
+  }
+}
+
+#form-status { margin-top: 10px; margin-left: 5px; }
+label.error { background-color: red; bottom: -30px; color: #fff;  font-size: 12px; left: 0;  padding: 5px; position: absolute; z-index: 2;
+  &:before { border-style: solid; border-width: 0 3.5px 5px 3.5px; border-color: transparent transparent red transparent; content: ""; height: 0px; left: 5px; position: absolute; top: -5px; width: 0px; }
+}
+
+// Selectize
+.selectize-control { height: 40px; }
+.selectize-control {
+  .selectize-input { @include border-radius(0px); @include box-shadow(none); @include transition(.3s); background: inherit; background-color: $color-grey-background; border: 2px solid $color-grey-light; height: 40px; padding: 9px;
+    &:after { cursor: pointer; }
+    &.full { background-color: $color-grey-background; }
+  }
+  .selectize-dropdown {  @include box-shadow(none); @include border-radius(0px); background-color: $color-grey-background; border-color: $color-grey-light; border-width: 2px; margin: -2px 0px 0px; width: 100% !important; }
+  .selectize-input {
+    &.focus { @include box-shadow(none); }
+    &.dropdown-active { @include border-radius(0px); }
+    input { font-size: 12px !important; }
+  }
+  .selectize-dropdown [ data-selectable] { padding: 8px; }
+  .selectize-dropdown { @include transition(.3s);
+    .active { color: $color-grey-dark; background-color: rgba(0,0,0,.05); }
+  }
+  &.has-dark-background {
+    .selectize-input { @include border-radius(0px); @include box-shadow(none); background: inherit; background-color: rgba(255,255,255,0.1); border: 2px solid rgba(255,255,255,0); height: 40px; padding: 9px;
+      &:hover { background-color: rgba(255,255,255,0.15); }
+      &.full { color: #fff;
+        &.focus { background-color: #fff; color: $color-grey-dark;
+          &.input-active { color: $color-grey-dark; }
+        }
+      }
+      &.not-full {
+        input { color: #fff; }
+        &.focus {
+          &.input-active { color: $color-grey-dark; background-color: #fff;
+            input { color: $color-grey-dark; }
+          }
+        }
+      }
+    }
+    .selectize-dropdown {  background-color: #fff; border-color: $color-grey-background; border-width: 2px; font-size: 12px !important; margin: -2px 0px 0px; width: 100% !important;
+      .selectize-dropdown-content {
+        .option { color: $color-grey-dark; }
+      }
+    }
+  }
+}
+
+
+.btn-input { display: block; }
+.btn-input .btn.form-control { text-align: left; }
+.btn-input .btn.form-control span:first-child { left: 10px; overflow: hidden; position: absolute; right: 25px; }
+.btn-input .btn.form-control .caret { margin-top: -1px; position: absolute; right: 10px; top: 50%; }

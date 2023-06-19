@@ -1,0 +1,51 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  FOOTER
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#page-footer {
+  a { color: #fff !important;
+    &:hover { color: $color-secondary !important; }
+  }
+  abbr { color: #fff; }
+  h4 { color: #fff; display: inline-block; font-size: 24px; margin-bottom: 35px; margin-top: 10px; position: relative;
+    &:after { @include opacity(.2); background-color: #fff; bottom: -15px; content: ""; height: 2px; left: 0; width: 30px; position: absolute; z-index: 0; }
+  }
+  ul { color: #fff; }
+  p { color: #fff; margin: 0; }
+  #footer-top { background-color: $color-grey-background; margin-top: 30px; padding: 30px 0;
+    .footer-inner { display: table;
+      .footer-social { display: table-cell; vertical-align: middle; width: 100%; //display: inline-block;
+        figure { display: inline-block; font-size: 14px; vertical-align: top;  }
+        .icons { display: inline-block;
+          i { @include opacity(.6); @include transition(.4s); color: $color-grey-dark; display: inline-block; float: left; font-size: 18px; margin-left: 15px; padding: 2px 10px; margin: 0px;
+            &:hover { @include opacity(1); }
+          }
+        }
+      }
+      .input-group { margin-bottom: 0;
+        input { width: 265px; }
+      }
+    }
+  }
+  #footer-content {  color: #fff !important; position: relative; padding: 40px 0;
+    .background { background-color: $color-primary; }
+  }
+  #footer-bottom { background-color: darken($color-primary, 2%); color: #fff; padding: 20px 0;
+    .footer-inner { display: table;  width: 100%;
+      .copyright { display: table-cell; vertical-align: middle; }
+    }
+    nav {
+      a { padding-top: 20px; padding-bottom: 20px;
+        &:hover,&:active,&:focus { background-color: transparent;  }
+      }
+    }
+  }
+}
+
+// Sticky Footer
+
+.wrapper { display: table; height: 100%; width: 100%; }
+#page-content { display: table-row; height: 100%; }
+#page-footer { display: table-row; height: 1px; }
+
+

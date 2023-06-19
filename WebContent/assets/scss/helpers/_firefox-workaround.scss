@@ -1,0 +1,16 @@
+// Firefox absolute position in table workaround
+
+@-moz-document url-prefix() {
+  th.headerSortUp {
+    &:after { @include font-awesome; color: $color-grey-dark; content: "\f0de"; display: inline-block; position: relative; right: 10px; right: -15px; top: inherit; }
+  }
+  th.headerSortDown {
+    &:after { @include font-awesome; color: $color-grey-dark; content: "\f0dd"; display: inline-block; position: relative; right: 10px; right: -15px; top: inherit; }
+  }
+  th.header {
+    &:before { display: none; }
+    &:hover {
+      &:after { @include font-awesome; color: $color-grey-light; content: "\f0dc"; display: inline-block; font-size: 12px; position: relative; right: 10px; right: -15px; top: inherit; }
+    }
+  }
+}

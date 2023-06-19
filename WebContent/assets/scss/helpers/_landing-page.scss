@@ -1,0 +1,78 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  LANDING PAGE
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.page-landing-page {
+
+  #homepage-slider { margin-top: 70px; height: 750px; overflow: hidden; text-align: center; position: relative;
+    .flexslider { height: 750px;
+      .flex-direction-nav { display: none;
+        .flex-next, .flex-prev { background-color: #fff; height: 30px; width: 30px;
+          &:before { display: none; }
+          &:after { @include font-awesome; color: $color-grey-dark; font-size: 16px; position: absolute; right: 11px; top: 6px; z-index: 2; }
+        }
+        .flex-next {
+          &:after { content: "\f105"; }
+        }
+        .flex-prev {
+          &:after { content: "\f104"; right: 12px; }
+        }
+      }
+    }
+    .slides { padding-left: 0; }
+    .landing-page-input { position: absolute; top: 270px; bottom: 0px; height: 50px; margin: auto; z-index: 3; right: 0px; left: 0px;
+      .input-group { font-weight: bold; margin: auto; width: 550px;
+        input { border: none; font-size: 18px; height: 70px; padding: 20px; }
+        .btn { font-size: 18px; height: 70px; margin-left: 0 !important; width: 70px; }
+        #form-status { position: absolute; color: #fff; width: 100%; left: 0; right: 0; margin-top: 15px; }
+      }
+    }
+    .scroll-down { color: #fff; position: absolute; bottom: -60px; left: 0; right: 0; margin: auto;
+      .fa { font-size: 24px; }
+    }
+  }
+
+  .block { padding: 90px 0; }
+  .navbar-brand {
+    &:after { display: none; }
+    &:before { height: 125px !important; }
+  }
+  #count-down {
+    .background { background-color: darken($color-primary, 5%); }
+    h2 { color: #fff; margin-bottom: 60px; text-transform: uppercase;
+      &:after { display: none; }
+    }
+  }
+  .course-info {
+    h2 { color: $color-primary; font-size: 36px; margin: 0px;
+      &:after { display: none; }
+    }
+    .time { font-size: 24px; }
+    .length { font-size: 14px; margin-bottom: 30px; }
+  }
+  .author-carousel { background: none;
+    .author { background-color: transparent; }
+    p { font-size: 14px; }
+    figure { font-size: 12px; font-weight: bold; }
+  }
+  .navigation-wrapper { background-color: $color-primary; position: fixed; width: 100%; z-index: 1;
+    .secondary-navigation-wrapper { display: none; }
+    .primary-navigation-wrapper { padding: 10px 0px;
+      .navbar-brand {
+        &:before { height: 100px !important; }
+      }
+    }
+  }
+  .pricing {
+    h3 { font-size: 24px; font-weight: bold; }
+    .features-description { bottom: 2px; display: block; list-style: none; padding: 0 30px 0 0; margin-top: 20px; margin-bottom: 0; position: absolute; width: 100%;
+      li { border-top: 2px solid $color-grey-background; color: $color-grey-medium; font-size: 14px; font-weight: bold; padding: 15px 0; }
+    }
+  }
+  .navigation-fixed { @include transition(.4s); background-color: $color-primary; padding: 10px 0px 5px 0px !important; position: fixed; width: 100%; top: 0; z-index: 999;
+    .navbar-brand { @include transition(.4s);
+      img { @include transition(.4s); max-height: 35px !important; }
+      &:before { @include transition(.4s); top: -65px !important; }
+    }
+  }
+}

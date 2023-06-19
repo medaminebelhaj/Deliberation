@@ -1,0 +1,77 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  UNIVERSAL CLASSES FOR USE IN HTML
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.add-margin { margin-bottom: 20px; }
+.background { height: 100%; position: absolute; top: 0; width: 100%; z-index: -1; }
+
+// Background color for elements or blocks
+.background-color-primary { background-color: $color-primary; }
+.background-color-primary-darken { background-color: darken($color-primary, 5%) !important; }
+.background-color-secondary { background-color: $color-secondary; }
+.background-color-grey-dark { background-color: $color-grey-dark; }
+.background-color-grey-light { background-color: $color-grey-light; }
+.background-color-grey-background { background-color: $color-grey-background; }
+.block-dark-background { background-color: $color-primary; padding: 20px 30px; }
+.center { text-align: center !important;}
+.center-image { bottom: 0; display: inline-block !important; left: 0; margin: auto; right: 0; top: 0; position: absolute; width: inherit !important; }
+.element-framed { border: 2px solid $color-grey-background; margin: 20px 0; padding: 20px;
+  li { margin-left: 10px; }
+}
+.font-color-light { color: #fff !important; }
+.font-color-dark { color: $color-grey-dark !important; }
+.font-color-primary { color: $color-primary !important; }
+.font-color-secondary { color: $color-secondary !important; }
+.font-color-grey-medium { color: $color-grey-medium !important; }
+.font-uppercase { text-transform: uppercase; }
+.has-dark-background { color: #fff;
+  a { color: #fff;
+    &:hover { color: $color-secondary; }
+  }
+  h2 {
+    &:after { @include opacity(.2); background-color: #fff; }
+  }
+  ul { color: #fff; }
+  p { @include opacity(.8); color: #fff; }
+}
+.has-opacity { @include opacity(.5); }
+.has-subtitle { margin-bottom: -5px; }
+.link-icon { color: $color-grey-dark;
+  &:hover { color: $color-primary; }
+  .fa { color: $color-secondary; margin: 0 5px; font-size: 18px; position: relative; top: 2px; }
+}
+.menu-child-align-left { left: 0 !important; }
+.menu-child-align-right { right: 0!important;
+  &:after { left: inherit !important; right: 30px !important;  }
+}
+.no-divider { margin-bottom: 15px;
+  &:after { display: none; }
+}
+.regular-case { text-transform: none; }
+.reset-margin { margin: 0 !important; }
+
+// Opacity for elements
+.opacity-1 { @include opacity(.01); }
+.opacity-2 { @include opacity(.02); }
+.opacity-3 { @include opacity(.03); }
+.opacity-4 { @include opacity(.04); }
+.opacity-5 { @include opacity(.05); }
+.opacity-6 { @include opacity(.06); }
+.opacity-7 { @include opacity(.07); }
+.opacity-8 { @include opacity(.08); }
+.opacity-9 { @include opacity(.09); }
+.opacity-10 { @include opacity(.1); }
+.opacity-20 { @include opacity(.2); }
+.opacity-30 { @include opacity(.3); }
+.opacity-40 { @include opacity(.4); }
+.opacity-50 { @include opacity(.5); }
+.opacity-60 { @include opacity(.6); }
+.opacity-70 { @include opacity(.7); }
+.opacity-80 { @include opacity(.8); }
+.opacity-90 { @include opacity(.9); }
+
+.stick-to-bottom { bottom: 0;  position: absolute; }
+
+.table-wrapper { display: table; width: 100%; height: 100%; }
+.table-cell-wrapper { display: table-cell; vertical-align: middle; }
+
+.vertical-center { bottom: 0; margin: auto; top: 0; position: absolute; }

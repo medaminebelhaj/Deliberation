@@ -1,0 +1,22 @@
+.sidebar {
+  > aside { margin-bottom: 30px;
+    &:first-child {
+      header {
+        h2 { margin-top: 10px; }
+      }
+    }
+  }
+  .author-block { clear: both; display: table; margin: 20px 0; padding: 15px;
+    figure {  float: left;
+      img { @include border-radius(50%); border: 3px solid #fff; width: 60px; }
+    }
+    article { padding-left: 25px;
+      header { color: $color-primary; margin-bottom: 10px; }
+      p { color: $color-grey-medium; line-height: 18px; }
+    }
+    .paragraph-wrapper { display: table-cell; vertical-align: middle;
+      header { font-size: 16px; margin-bottom: 0; }
+      figure { display: block; width: 100%; margin-bottom: 10px; }
+    }
+  }
+}
